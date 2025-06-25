@@ -50,7 +50,7 @@
 
     <v-footer app class="d-flex justify-center">
       <v-btn @click="store.showSetup" class="mx-2">설정으로</v-btn>
-      <v-btn @click="resetAll" color="warning" class="mx-2">점수 초기화</v-btn>
+      <v-btn @click="resetAll" color="warning" class="mx-2">초기화</v-btn>
     </v-footer>
   </v-container>
 </template>

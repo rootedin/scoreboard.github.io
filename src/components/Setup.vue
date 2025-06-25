@@ -3,7 +3,7 @@
     <v-card 
       class="mx-auto pa-4"
       max-width="400"
-      title="스코어보드 설정">
+      title="점수판 설정">
       <v-card-text>
         <v-text-field
           v-model.number="teamCount"
@@ -21,7 +21,7 @@
           block
           @click="startScoreboard"
         >
-          시작하기
+          시작
         </v-btn>
       </v-card-actions>
     </v-card>
