@@ -11,6 +11,11 @@
 import { useAppStore } from '@/stores/app';
 import Setup from './components/Setup.vue';
 import Scoreboard from './components/Scoreboard.vue';
+import { onMounted } from 'vue';
 
 const store = useAppStore();
+
+onMounted(() => {
+  store.loadFromStorage();
+});
 </script>

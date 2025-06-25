@@ -29,12 +29,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue"
+import { ref, computed, watch } from "vue"
 import { useAppStore } from "@/stores/app"
 
 const store = useAppStore()
 
 const teamCount = ref(store.teamCount)
+
+// store.teamCount가 변경될 때마다 teamCount도 동기화
+watch(() => store.teamCount, (val) => {
+  teamCount.value = val
+})
 
 const rules = {
   required: (value: any) => !!value || '팀 개수를 입력해주세요.',
